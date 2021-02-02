@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Stratos LC Web';
+  font-weight: 900;
+  font-style: normal;
+}
+
+.nav-link {
+  color: #675fff!important;
+  /*font-family: "Stratos LC Web";*/
+  /*font-weight: 700;*/
+}
+
+.navbar {
+  background-color: black;
+}
+
+.btn#signup-btn {
+  background-color: #ffd694;
+  color: black;
+  /*font-family: "Stratos LC Web";*/
+  /*font-weight: 500;*/
+}
+
+.btn#login-btn {
+  background-color: #474747;
+  color: white;
+  /*font-family: "Stratos LC Web";*/
+  /*font-weight: 500;*/
+}
+
+.btn#logout-btn {
+  background-color: #474747;
+  color: white;
+  /*font-family: "Stratos LC Web";*/
+  /*font-weight: 500;*/
+}
+
+#top_text {
+  font-size: 2.4vw;
+}
+
+#price {
+  color: #a37efe;
+}
+
+#teachers_block {
+  background-color: #a37efe;
+  color: white;
+}
+
