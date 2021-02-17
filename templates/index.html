@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block head_title %}
+{% block title %}
     Главная страница
-{% endblock %}
+{% endblock title %}
 
 {% block content %}
-
-    {% include "navbar.html" %}
 
     <main class="page lanidng-page">
         <section class="portfolio-block block-intro">
@@ -87,21 +85,21 @@
                     pellentesque ut laoreet vitae. </p>
             </div>
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item"><img src="{% static '/assets/img/avatars/Anya.png' %}" alt="Анна">
+                <div class="col-md-6 col-lg-4 item"><img src="{% static 'img/avatars/Anya.png' %}" alt="Анна">
                     <h3 class="name">Анна</h3>
                     <p class="title">Работает репетитором 5 лет</p>
                     <p class="description">Ровный репетитор. Каждый год сдает ЕГЭ по математике.&nbsp;</p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
                             class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><img src="/static/assets/img/avatars/Misha.png" alt="Миша">
+                <div class="col-md-6 col-lg-4 item"><img src="{% static 'img/avatars/Misha.png' %}" alt="Миша">
                     <h3 class="name">Михаил</h3>
                     <p class="title">Работает репетитором 0 лет</p>
                     <p class="description">Строгий и требовательный репетитор.</p>
                     <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
                             class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                 </div>
-                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="/static/assets/img/avatars/3.jpg"
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="{% static 'img/avatars/3.jpg' %}"
                                                          alt="">
                     <h3 class="name">Carl Kent</h3>
                     <p class="title">Stylist</p>
@@ -114,15 +112,5 @@
             </div>
         </div>
     </div>
-    <footer class="page-footer" id="contacts_block">
-        <div class="container">
-            <div class="links"><a href="#" class="btn btn-outline-primary white" style="color: rgb(93,167,217);"><i
-                    class="fas fa-phone" style="color: #a37ffe"></i>&nbsp;+7 (999) 020-50-74</a></div>
-            <div class="social-icons"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
-                    class="icon ion-social-instagram-outline"></i></a><a href="#"><i
-                    class="icon ion-social-twitter"></i></a></div>
-        </div>
-    </footer>
-
 
 {% endblock content %}

@@ -10,6 +10,14 @@ body {
   font-style: normal;
 }
 
+.modal-content {
+  background-color: #a37efe;
+}
+
+.img-logo {
+  height: 50px;
+}
+
 .nav-link {
   color: #675fff!important;
 }
@@ -26,6 +34,7 @@ body {
 .btn#login-btn {
   background-color: #474747;
   color: white;
+  margin-top: 13px;
 }
 
 .btn#logout-btn {
@@ -37,21 +46,12 @@ body {
   font-size: 2.4vw;
 }
 
-.img-logo{
-  height: 50px
-}
-
-.navbar-toggler-icon{
-  color:#fff;
-  font-size:28px;
-}
-
-.price {
+#price {
   color: #a37efe;
 }
 
 #teachers_block {
-  background-color: #a37efe;
-  color: white;
+  /*background-color: #a37efe;*/
+  /*color: white;*/
 }
 

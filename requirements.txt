@@ -1,5 +1,4 @@
 django
-psycopg2
 django-bootstrap-modal-forms
 django-widget-tweaks
 phonenumbers

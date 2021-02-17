@@ -1,3 +1,6 @@
+{% load static %}
+{% include "_modal.html" %}
+
 <nav class="navbar navbar-expand-md navbar-clean py-0">
     <div class="container">
 
@@ -8,7 +11,7 @@
 
         <!-- Логотип -->
         <a class="navbar-brand py-0" href="#">
-            <img class="img-logo" src="/static/assets/img/logos/logo_no_bg.png" alt="Anya'School">
+            <img class="img-logo" src="{% static 'img/logos/logo_no_bg.png' %}" alt="Anya'School">
         </a>
         <!-- Сворачивающиеся пункты меню -->
         <div class="collapse navbar-collapse" id="navcol-1">
@@ -21,33 +24,21 @@
             </ul>
 
             <ul class="nav navbar-nav mx-0">
-
-                {% block messages %}
-                    {% if messages %}
-                                {% for message in messages %}
-                                    <p>({ message }}</p>
-                                {% endfor %}
-                    {% endif %}
-                {% endblock messages %}
-
                 {% if user.is_authenticated %}
                     <li role="presentation" class="nav-item mr-2 my-2">
-                        <p>Вы вошли как <strong>{{ user }}</strong></p>
+                        <p>Вы вошли как <a href="{% url 'profile' %}"><strong> {{ user }}</strong></a></p>
                     </li>
                     <li role="presentation" class="nav-item mr-2 my-2">
-                        <a href="{% url 'account_logout' %}" id="logout-btn" class="btn">Выйти
-                        </a>
+                        <a id="logout-btn" class="btn">Выйти</a>
                     </li>
                 {% else %}
                     <li role="presentation" class="nav-item mr-2 my-2">
-                        <a href="{% url 'account_signup' %}" id="signup-btn" class="btn">Начать бесплатно
-                        </a>
+                        <a href="#" class="btn nav-link">Начать бесплатно</a>
                     </li>
                     <li role="presentation" class="nav-item">
-                        <a href="{% url 'account_login' %}" id="login-btn" class="btn my-2">Войти</a>
+                        <a id="login-btn" class="btn">Войти</a>
                     </li>
                 {% endif %}
-
             </ul>
 
         </div>
