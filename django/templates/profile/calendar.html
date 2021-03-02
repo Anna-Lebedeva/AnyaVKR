@@ -1,0 +1,82 @@
+{% extends 'profile/profile.html' %}
+
+{% block extra_extra_head %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                headerToolbar: {center: 'dayGridMonth,timeGridWeek,listWeek,addEventButton'},
+                customButtons: {
+                    addEventButton: {
+                        text: 'Добавить урок',
+                        click: function () {
+                            let dateStr = prompt('Enter a date in YYYY-MM-DD format');
+                            let date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+                            if (!isNaN(date.valueOf())) { // valid?
+                                calendar.addEvent({
+                                    title: 'dynamic event',
+                                    start: date,
+                                    allDay: true
+                                });
+                                alert('Great. Now, update your database...');
+                            } else {
+                                alert('Invalid date.');
+                            }
+                        }
+                    }
+                },
+                views: {
+                    dayGridMonth: { // name of view
+                        titleFormat: {year: 'numeric', month: '2-digit', day: '2-digit'}
+                    },
+                    timeGridWeek: { // name of view
+                        slotLabelFormat: {
+                            hour: '2-digit',  // or numeric
+                            minute: '2-digit',
+                            {#omitZeroMinute: true,#}
+                        },
+                        slotMinTime: '08:00:00',
+                        slotMaxTime: '24:00:00',
+                    },
+                },
+                editable: true,
+                selectable: true,
+                dateClick: function () {
+                    console.log('a day has been clicked!');
+                },
+                {#events: [#}
+                {##}
+                {#    {% for less in lesson %}#}
+                {#        {#}
+                {#            id: '{{ less.id }}',#}
+                {#            title: '{{ less.subject }}',#}
+                {#            start: '{{ less.time }}',#}
+                {#end: '{{ less.time }} + {{ less.duration }}',#}
+                {#    },#}
+                {#{% endfor %}#}
+                {#]#}
+            });
+            calendar.setOption('locale', 'ru');
+
+            calendar.render();
+        });
+    </script>
+
+    <style>
+        #calendar {
+            background-color: #bdaeff;
+            color: #000e;
+        }
+    </style>
+{% endblock extra_extra_head %}
+
+{% block right-content %}
+    {% for less in lesson %}
+        {{ less.id }}<br>
+        {{ less.subject }}<br>
+        {{ less.time }} <br>
+    {% endfor %}
+    <div id='calendar'></div>
+{% endblock right-content %}
