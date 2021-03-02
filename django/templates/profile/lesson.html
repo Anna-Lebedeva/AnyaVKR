@@ -1,0 +1,34 @@
+{% extends 'profile/profile.html' %}
+
+{% block extra_extra_head %}
+    <style>
+        #lesson-board {
+            width: 100%;
+            height: 100%;
+            {#position: absolute;#}
+            {#top: 0;#}
+            {#left: 0;#}
+            {#border-style: none;#}
+            background-color: #fffcef;
+        }
+        #lesson-book {
+
+        }
+    </style>
+{% endblock extra_extra_head %}
+
+{% block right-content %}
+    <div class="row" style="height: 800px">
+        <div class="col">
+            <iframe id="lesson-board"
+                    src="http://localhost:8080/boards/{{ lesson.board }}"></iframe>
+        </div>
+        <div class="col">
+            <embed id="lesson-book"
+                   src="http://docs.google.com/gview?url=https://foatk.ru/documents/book1.pdf&embedded=true"
+                   width="100%" height="100%"
+                   type="application/pdf">
+        </div>
+    </div>
+{% endblock right-content %}
+{# https://foatk.ru/documents/book1.pdf #}
