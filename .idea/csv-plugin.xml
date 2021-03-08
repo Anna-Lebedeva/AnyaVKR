@@ -31,42 +31,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\django\static\css\Stratos LC Web.css">
+        <entry key="\django\requirements.txt">
           <value>
             <Attribute>
-              <option name="separator" value="&#9;" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\django\static\css\main.css">
-          <value>
-            <Attribute>
-              <option name="separator" value=";" />
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
         <entry key="\django\templates\base.html">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\django\templates\index.html">
-          <value>
-            <Attribute>
-              <option name="separator" value=";" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\django\templates\navbar.html">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\django\templates\profile.html">
           <value>
             <Attribute>
               <option name="separator" value=":" />
@@ -83,7 +55,7 @@
         <entry key="\django\templates\profile\lesson.html">
           <value>
             <Attribute>
-              <option name="separator" value=":" />
+              <option name="separator" value=";" />
             </Attribute>
           </value>
         </entry>
@@ -91,27 +63,6 @@
           <value>
             <Attribute>
               <option name="separator" value=";" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\django\templates\registration\signup.html">
-          <value>
-            <Attribute>
-              <option name="separator" value=";" />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\dumpDataPreview">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\venv\Lib\site-packages\django\db\models\query.py">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

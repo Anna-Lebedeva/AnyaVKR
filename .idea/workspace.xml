@@ -4,202 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31001c9-876e-42c5-8679-85989f421176" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AnyaVKR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.github/FUNDING.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.github/pull_request_template.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.github/workflows/CI.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.github/workflows/ssh_deploy.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/AUTHORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/apple-touch-icon-precomposed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/apple-touch-icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/board.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/board.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/crossdomain.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/favicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/icon-size.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/js/board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/js/canvascolor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/js/minitpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/js/path-data-polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/cursor/cursor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/ellipse/ellipse.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/ellipse/ellipse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/ellipse/icon-circle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/ellipse/icon-ellipse.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/eraser/eraser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/eraser/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/grid/grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/grid/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/hand/hand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/hand/hand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/hand/mover.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/line/icon-straight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/line/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/line/line.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/line/line.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/cursor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/pencil.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/pencil.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/wbo_pencil_point.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/whiteout_fluid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/pencil/whiteout_tape.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/rect/icon-square.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/rect/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/rect/rect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/rect/rect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/text/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/text/text.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/text/text.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/zoom/icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/client-data/tools/zoom/zoom.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/nightwatch.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server-data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/boardData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/check_output_directory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/client_configuration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/configuration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/createSVG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/fs_promises.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/log.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/sockets.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/templating.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/server/translations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/board/tests/integration.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/AnyaVKR/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/mainapp/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/mainapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/mainapp/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/mainapp/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/mainapp/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/css/Stratos LC Web.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/css/calendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/js/calendar-locales-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/static/js/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/_modal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/profile/calendar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/profile/finance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/profile/lesson.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/profile/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django/templates/registration/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnyaVKR/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/AnyaVKR/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnyaVKR/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/AnyaVKR/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnyaVKR/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/AnyaVKR/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnyaVKR/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AnyaVKR/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/AnyaVKR/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_root/95602cf3d280b06ab05204f933394698.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/django/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/Copperplate Gothic Light.css" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/css/Copperplate Gothic Light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/Dynamically-Queue-Videos.css" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/css/Dynamically-Queue-Videos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/Stratos LC Web.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/Team-Clean.css" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/css/Team-Clean.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Bold.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Bold.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Bold.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Light.eot" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Light.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Light.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Light.woff" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Light.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Light.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Light.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Medium.eot" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Medium.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Medium.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Medium.woff" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Medium.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Medium.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/StratosLCWeb-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/StratosLCWeb/StratosLCWeb-Regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/copperplate-gothic-light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome5-overrides.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/ionicons.eot" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/ionicons.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/ionicons.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/ionicons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/ionicons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/ionicons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/fonts/ionicons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/avatars/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/img/avatars/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/avatars/Anya.png" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/img/avatars/Anya.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/avatars/Misha.png" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/img/avatars/Misha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logos/logo_no_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/img/logos/logo_no_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/Dynamically-Queue-Videos.js" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/js/Dynamically-Queue-Videos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" />
+    <list default="true" id="8b519acd-90dc-4d1f-a18c-e426a6d6d74e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/django/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0002_auto_20210303_1457.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0003_auto_20210303_1510.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0004_auto_20210303_1511.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0005_auto_20210307_0125.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0006_auto_20210307_0231.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0007_auto_20210307_0231.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0008_auto_20210307_0235.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0009_auto_20210307_0255.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0010_auto_20210307_2119.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0011_auto_20210308_0308.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0012_auto_20210308_0324.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0013_auto_20210308_0328.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0014_auto_20210308_0331.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0015_auto_20210308_0337.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0016_auto_20210308_0341.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0017_auto_20210308_0352.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/mainapp/migrations/0018_auto_20210308_0356.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/media/books/book1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/css/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/css/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_777620_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_777777_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_cc0000_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/img/jqueryui/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/django/static/js/jquery-ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AnyaVKR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnyaVKR.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/AnyaVKR/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/AnyaVKR/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/mainapp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/django/mainapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/static/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/django/static/js/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/profile/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/profile/calendar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/profile/lesson.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/profile/lesson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/profile/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/django/templates/registration/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,8 +68,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -222,13 +77,16 @@
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
       <filtered-out-file-type name="REMOTE_BRANCH" />
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-      <filtered-out-file-type name="LOCAL_BRANCH" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="1oZq9aSKWStzZrS3S9cQPF9S3iE" />
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/board/package.json" />
+  </component>
+  <component name="ProjectId" id="1pFwoitUb6xPoW6LWD5pRIaZcJh" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -238,101 +96,57 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.5" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.28" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/adwd/main_mainapp_teacher.csv" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.32" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/django/templates/profile" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anya\PycharmProjects\AnyaVKR\django\templates\profile" />
       <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\templates\profile" />
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\templates\registration" />
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\static\js" />
-      <recent name="C:\Users\ex10se\PycharmProjects\AnyaVKR\static\css" />
-      <recent name="C:\Users\ex10se\PycharmProjects\AnyaVKR\static\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\templates\profile" />
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\templates" />
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\static\js" />
+      <recent name="C:\Users\Anya\PycharmProjects\AnyaVKR\django\static\js" />
       <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\static\css" />
-      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR" />
+      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\static\img\jqueryui" />
+      <recent name="C:\Users\Anna\PycharmProjects\AnyaVKR\django\static\js" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.profile.html">
-    <configuration name="profile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AnyaVKR/templates/profile/profile.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.lesson.html">
+    <configuration name="calendar.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AnyaVKR/django/templates/profile/calendar.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="AnyaVKR" type="Python.DjangoServer" factoryName="Django server">
-      <module name="AnyaVKR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration name="lesson.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/AnyaVKR/django/templates/profile/lesson.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.profile.html" />
+        <item itemvalue="JavaScript Debug.lesson.html" />
+        <item itemvalue="JavaScript Debug.calendar.html" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e31001c9-876e-42c5-8679-85989f421176" name="Default Changelist" comment="" />
-      <created>1613504315705</created>
+      <changelist id="8b519acd-90dc-4d1f-a18c-e426a6d6d74e" name="Default Changelist" comment="" />
+      <created>1614792322192</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613504315705</updated>
-      <workItem from="1613504316862" duration="7997000" />
-      <workItem from="1613512358343" duration="4937000" />
-      <workItem from="1613548240803" duration="6472000" />
-      <workItem from="1613568525914" duration="146000" />
-      <workItem from="1613568704854" duration="4604000" />
-      <workItem from="1613698339366" duration="2993000" />
-      <workItem from="1614043509187" duration="1281000" />
-      <workItem from="1614045836701" duration="34000" />
-      <workItem from="1614046144730" duration="52463000" />
-      <workItem from="1614184317221" duration="82000" />
-      <workItem from="1614295242981" duration="25506000" />
-      <workItem from="1614364012890" duration="214000" />
-      <workItem from="1614708536023" duration="1161000" />
+      <updated>1614792322192</updated>
+      <workItem from="1614792323764" duration="19550000" />
+      <workItem from="1615078482814" duration="19495000" />
+      <workItem from="1615149362562" duration="16911000" />
+      <workItem from="1615159749803" duration="9679000" />
+      <workItem from="1615203964437" duration="18962000" />
     </task>
     <servers />
   </component>
@@ -350,5 +164,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -7,7 +7,7 @@ from .models import PreStudent
 
 class StudentAdmin(admin.ModelAdmin):
     fields = ('prestudent_id', 'username', 'password1', 'password2', 'first_name', 'last_name',
-              'email', 'phone', 'grade', 'parent_name')
+              'email', 'phone', 'grade', 'parent_name', 'student_teacher')
     form = UserCreationForm
     change_form = UserChangeForm
 
@@ -26,6 +26,7 @@ class TeacherAdmin(admin.ModelAdmin):
               'middle_name', 'picture', 'email', 'phone')
     form = UserCreationForm
     change_form = UserChangeForm
+    list_display = ('username', 'get_full_name')
 
 
 admin.site.register(models.Teacher, TeacherAdmin)
@@ -39,7 +40,7 @@ admin.site.register(models.PreStudent, PreStudentAdmin)
 
 
 class LessonAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('student', 'board', 'subject', 'time_start', 'duration', 'get_teacher')
 
 
 admin.site.register(models.Lesson, LessonAdmin)

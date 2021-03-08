@@ -1,4 +1,8 @@
 {% extends 'profile/profile.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+
 
 {% block extra_extra_head %}
     <script>
@@ -6,26 +10,13 @@
             const calendarEl = document.getElementById('calendar');
             const calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'timeGridWeek',
-                headerToolbar: {center: 'dayGridMonth,timeGridWeek,listWeek,addEventButton'},
-                customButtons: {
-                    addEventButton: {
-                        text: 'Добавить урок',
-                        click: function () {
-                            let dateStr = prompt('Enter a date in YYYY-MM-DD format');
-                            let date = new Date(dateStr + 'T00:00:00'); // will be in local time
-
-                            if (!isNaN(date.valueOf())) { // valid?
-                                calendar.addEvent({
-                                    title: 'dynamic event',
-                                    start: date,
-                                    allDay: true
-                                });
-                                alert('Great. Now, update your database...');
-                            } else {
-                                alert('Invalid date.');
-                            }
-                        }
-                    }
+                //headerToolbar: {
+                //    center: 'dayGridMonth,timeGridWeek,listWeek'
+                //},
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
                 },
                 views: {
                     dayGridMonth: { // name of view
@@ -33,34 +24,114 @@
                     },
                     timeGridWeek: { // name of view
                         slotLabelFormat: {
-                            hour: '2-digit',  // or numeric
+                            hour: 'numeric',  // or numeric
                             minute: '2-digit',
-                            {#omitZeroMinute: true,#}
                         },
                         slotMinTime: '08:00:00',
                         slotMaxTime: '24:00:00',
+                        slotLabelInterval: '01:00',
+                        scrollTime: '12:00',
                     },
                 },
-                editable: true,
+                dayMaxEvents: true,
                 selectable: true,
-                dateClick: function () {
-                    console.log('a day has been clicked!');
+                dateClick: function (info) {
+                    $("#dialog-add-lesson").dialog("open");
+                    $("#id_time_start").val(info.date.toLocaleString().replace(',', ''));
                 },
-                {#events: [#}
-                {##}
-                {#    {% for less in lesson %}#}
-                {#        {#}
-                {#            id: '{{ less.id }}',#}
-                {#            title: '{{ less.subject }}',#}
-                {#            start: '{{ less.time }}',#}
-                {#end: '{{ less.time }} + {{ less.duration }}',#}
-                {#    },#}
-                {#{% endfor %}#}
-                {#]#}
+                eventClick: function (info) {
+                    $("#dialog-info-lesson").dialog("open");
+                    {#console.log(info.event.start.toLocaleString().replace(',', ''));#}
+                    $("#id_time_start").val(info.event.start.toLocaleString().replace(',', ''));
+                    $("#id_subject").val(info.event.subject);
+                },
+                {#timeZone: 'local',#}
+                allDaySlot: false,
+                events: [
+                    {% for lesson in lessons %}
+                        {
+                            id: {{ lesson.id }},
+                            title: '{{ lesson.subject }}',
+                            start: '{{ lesson.time_start|date:"c" }}',
+                            end: '{{ lesson.get_end_time|date:"c" }}',
+                            {% if lesson.duration == '60' %}
+                                backgroundColor: 'black',
+                                textColor: 'pink'
+                            {% elif lesson.duration == '45' %}
+                                backgroundColor: 'pink',
+                                textColor: 'black'
+                            {% endif %}
+                        },
+                    {% endfor %}
+                ]
             });
             calendar.setOption('locale', 'ru');
 
             calendar.render();
+
+            $("#dialog-add-lesson").dialog({
+                autoOpen: false,
+                height: 400,
+                width: 350,
+                resizable: false,
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                    $('.ui-widget-overlay').bind('click', function () {
+                        $('#dialog-add-lesson').dialog('close');
+                    });
+                },
+                show: {
+                    effect: 'fade',
+                    duration: 200
+                },
+                hide: {
+                    effect: 'fade',
+                    duration: 200
+                },
+                title: 'Добавить урок',
+                closeText: "hide",
+                classes: {
+                    "ui-dialog": "modal-content",
+                    "ui-dialog-titlebar": "modal-header",
+                    "ui-dialog-title": "modal-title",
+                    "ui-dialog-titlebar-close": "close",
+                    "ui-dialog-content": "modal-body",
+                    "ui-dialog-buttonpane": "modal-footer"
+                },
+            });
+
+            $("#dialog-info-lesson").dialog({
+                autoOpen: false,
+                height: 400,
+                width: 350,
+                resizable: false,
+                modal: true,
+                closeOnEscape: true,
+                open: function (event, ui) {
+                    $('.ui-widget-overlay').bind('click', function () {
+                        $("#dialog-info-lesson").dialog('close');
+                    });
+                },
+                show: {
+                    effect: 'fade',
+                    duration: 200
+                },
+                hide: {
+                    effect: 'fade',
+                    duration: 200
+                },
+                title: 'Изменить урок',
+                closeText: "hide",
+                classes: {
+                    "ui-dialog": "modal-content",
+                    "ui-dialog-titlebar": "modal-header",
+                    "ui-dialog-title": "modal-title",
+                    "ui-dialog-titlebar-close": "close",
+                    "ui-dialog-content": "modal-body",
+                    "ui-dialog-buttonpane": "modal-footer"
+                },
+            });
         });
     </script>
 
@@ -69,14 +140,117 @@
             background-color: #bdaeff;
             color: #000e;
         }
+
+        .fc-event-main-frame {
+            cursor: pointer;
+        }
+
+        #dialog-add-lesson, #dialog-info-lesson {
+            background-color: white;
+        }
+
+        #calendar > div.fc-view-harness.fc-view-harness-active {
+            height: 876px !important;
+        }
+
+        .ui-widget-overlay {
+            background-color: black;
+            opacity: .3;
+        }
+
+        .ui-icon, .ui-widget-content .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_444444_256x240.png' %}")
+        }
+
+        .ui-widget-header .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_444444_256x240.png' %}")
+        }
+
+        .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_555555_256x240.png' %}")
+        }
+
+        .ui-state-active .ui-icon, .ui-button:active .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_ffffff_256x240.png' %}")
+        }
+
+        .ui-state-highlight .ui-icon, .ui-button .ui-state-highlight.ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_777620_256x240.png' %}")
+        }
+
+        .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_cc0000_256x240.png' %}")
+        }
+
+        .ui-button .ui-icon {
+            background-image: url("{% static 'img/jqueryui/ui-icons_777777_256x240.png' %}")
+        }
+
     </style>
 {% endblock extra_extra_head %}
-
 {% block right-content %}
-    {% for less in lesson %}
-        {{ less.id }}<br>
-        {{ less.subject }}<br>
-        {{ less.time }} <br>
-    {% endfor %}
+    <div id="dialog-add-lesson">
+        <div id="dialog-form">
+            <form method="post" action="{% url 'add_lesson' %}">
+                {% csrf_token %}
+                <div class="{% if form_add.non_field_errors %}invalid{% endif %} mb-2">
+                    {% for error in form_add.non_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+                {% for field in form_add %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {% if field.label == "Время" %}
+                            {% render_field field class="form-control" placeholder=field.label readonly=readonly %}
+                        {% else %}
+                            {% render_field field class="form-control" placeholder=field.label %}
+                        {% endif %}
+                        <div class="{% if field.errors %} invalid{% endif %}">
+                            {% for error in field.errors %}
+                                <p class="help-block">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <button type="submit" class="submit-btn btn" autofocus="autofocus">Добавить</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="dialog-info-lesson">
+        <div id="dialog-form">
+            <form method="post" action="{% url 'add_lesson' %}">
+                {% csrf_token %}
+                <div class="{% if form_editnon_field_errors %}invalid{% endif %} mb-2">
+                    {% for error in form_editnon_field_errors %}
+                        {{ error }}
+                    {% endfor %}
+                </div>
+                {% for field in form_edit %}
+                    <div class="form-group">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {% if field.label == "Время" %}
+                            {% render_field field class="form-control" placeholder=field.label readonly=readonly %}
+                        {% else %}
+                            {% render_field field class="form-control" placeholder=field.label %}
+                        {% endif %}
+                        <div class="{% if field.errors %} invalid{% endif %}">
+                            {% for error in field.errors %}
+                                <p class="help-block">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+                <div>
+                                        <button type="submit" class="submit-btn btn" autofocus="autofocus">Сохранить</button>
+                    {#                    <button type="button" class="submit-btn btn" autofocus="autofocus">Удалить</button>#}
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div id='calendar'></div>
 {% endblock right-content %}
+

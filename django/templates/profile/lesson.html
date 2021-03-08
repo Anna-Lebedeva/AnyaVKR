@@ -1,34 +1,208 @@
 {% extends 'profile/profile.html' %}
+{% load static %}
 
 {% block extra_extra_head %}
+    <script>
+        window.onload = init;
+
+        function init() {
+            const left = document.getElementById('drag-left');
+            const bar = document.getElementById('dragbar');
+            const rng = document.getElementById('customRange1')
+
+            const drag = (e) => {
+                document.selection ? document.selection.empty() : window.getSelection().removeAllRanges();
+                left.style.width = (e.pageX - bar.offsetWidth / 2) + 'px';
+            }
+            rng.addEventListener('mousedown', () => {
+                console.log('down');
+                document.addEventListener('mousemove', drag);
+            });
+
+            document.addEventListener('mouseup', () => {
+                console.log('up');
+                document.removeEventListener('mousemove', drag);
+            });
+        }
+    </script>
+
     <style>
+
+        body {
+            overflow: hidden;
+        }
         #lesson-board {
             width: 100%;
             height: 100%;
-            {#position: absolute;#}
-            {#top: 0;#}
-            {#left: 0;#}
-            {#border-style: none;#}
             background-color: #fffcef;
         }
-        #lesson-book {
 
+        .drag-container {
+            display: flex;
+            flex: 1 1 auto;
+            height: 90vh;
         }
+
+        .dragbar {
+        {#padding: 6px;#} cursor: col-resize;
+            background-color: #9b9b9b;
+        }
+
+        .panel-one {
+            width: 70%;
+            overflow: hidden;
+        }
+
+        .panel-two {
+            flex: 1;
+            width: 30%;
+            overflow: hidden;
+        }
+
+        #customRange1 {
+            width: 100%;
+        }
+
+        #customRange1 {
+            -webkit-appearance: none;
+            margin-bottom: 6px;
+            background-color: transparent !important;
+        }
+
+        #customRange1:focus {
+            outline: none;
+        }
+
+        #customRange1::-webkit-slider-runnable-track {
+            cursor: pointer;
+            box-shadow: 2px 2px 6px rgba(7, 7, 163, 0.72), 0 0 2px rgba(8, 8, 187, 0.72);
+            background: #ac62ff;
+            border-radius: 22px;
+            border: 1px solid rgba(163, 0, 255, 0.79);
+        }
+
+        #customRange1::-webkit-slider-thumb {
+            box-shadow: 2px 2px 9px rgba(4, 16, 14, 0.78), 0 0 2px rgba(9, 36, 32, 0.78);
+            border: 2px solid rgba(0, 0, 6, 0.77);
+            border-radius: 28px;
+            background: #b18c59;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -7.8px;
+        }
+
+        #customRange1:focus::-webkit-slider-runnable-track {
+            background: #b16cff;
+        }
+
+        #customRange1::-moz-range-track {
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 2px 2px 6px rgba(7, 7, 163, 0.72), 0 0 2px rgba(8, 8, 187, 0.72);
+            background: #ac62ff;
+            border-radius: 22px;
+            border: 1px solid rgba(163, 0, 255, 0.79);
+        }
+
+        #customRange1::-moz-range-thumb {
+            box-shadow: 2px 2px 9px rgba(4, 16, 14, 0.78), 0 0 2px rgba(9, 36, 32, 0.78);
+            border: 2px solid rgba(0, 0, 6, 0.77);
+            border-radius: 28px;
+            background: #b18c59;
+            cursor: pointer;
+        }
+
+        #customRange1::-ms-track {
+            width: 100%;
+            cursor: pointer;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        #customRange1::-ms-fill-lower {
+            background: #a758ff;
+            border: 1px solid rgba(163, 0, 255, 0.79);
+            border-radius: 43px;
+            box-shadow: 2px 2px 6px rgba(7, 7, 163, 0.72), 0 0 2px rgba(8, 8, 187, 0.72);
+        }
+
+        #customRange1::-ms-fill-upper {
+            background: #ac62ff;
+            border: 1px solid rgba(163, 0, 255, 0.79);
+            border-radius: 43px;
+            box-shadow: 2px 2px 6px rgba(7, 7, 163, 0.72), 0 0 2px rgba(8, 8, 187, 0.72);
+        }
+
+        #customRange1::-ms-thumb {
+            box-shadow: 2px 2px 9px rgba(4, 16, 14, 0.78), 0 0 2px rgba(9, 36, 32, 0.78);
+            border: 2px solid rgba(0, 0, 6, 0.77);
+            border-radius: 28px;
+            background: #b18c59;
+            cursor: pointer;
+        }
+
+        #customRange1:focus::-ms-fill-lower {
+            background: #ac62ff;
+        }
+
+        #customRange1:focus::-ms-fill-upper {
+            background: #b16cff;
+        }
+
+        /* Track */
+        #customRange1::-webkit-slider-runnable-track {
+            height: 6px;
+        }
+
+        #customRange1::-moz-range-track {
+            height: 6px;
+        }
+
+        #customRange1::-ms-track {
+            height: 6px;
+        }
+
+        /* Thumb */
+        #customRange1::-webkit-slider-thumb {
+            height: 20px;
+            width: 8px;
+        }
+
+        #customRange1::-moz-range-thumb {
+            height: 20px;
+            width: 8px;
+        }
+
+        #customRange1::-ms-thumb {
+            height: 20px;
+            width: 8px;
+        }
+
+
     </style>
 {% endblock extra_extra_head %}
 
 {% block right-content %}
-    <div class="row" style="height: 800px">
-        <div class="col">
+    <label for="customRange1" style="display: none"></label>
+    <input type="range" class="form-range" id="customRange1" min="0" max="10000" value="7000">
+    <div class="drag-container" id="drag-container">
+        <div class="panel-one" id="drag-left">
             <iframe id="lesson-board"
                     src="http://localhost:8080/boards/{{ lesson.board }}"></iframe>
         </div>
-        <div class="col">
+        <div class="dragbar" id="dragbar"></div>
+        <div class="panel-two" id="drag-right">
+            <!--suppress DjangoUnresolvedStaticReferenceInspection -->
             <embed id="lesson-book"
-                   src="http://docs.google.com/gview?url=https://foatk.ru/documents/book1.pdf&embedded=true"
+                   src="{{ MEDIA_URL }}books/book1.pdf?#scrollbar=0&toolbar=1&navpanes=1&page=1&view=FitH"
                    width="100%" height="100%"
                    type="application/pdf">
         </div>
     </div>
 {% endblock right-content %}
 {# https://foatk.ru/documents/book1.pdf #}
+
+{% block footer %}
+{% endblock footer %}
+

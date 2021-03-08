@@ -1,7 +1,7 @@
 {% load static %}
 {% include "_modal.html" %}
 
-<nav class="navbar navbar-expand-lg align-content-between">
+<nav class="navbar navbar-expand-lg align-content-between" id="navbar">
     <div class="container-fluid">
 
 
@@ -26,14 +26,18 @@
                 <a class="nav-link" href="#contacts_block">Контакты</a>
                 <a class="nav-link" href="#teachers_block">О нас</a>
                 <a class="nav-link" href="#prices_block">Цены</a>
+            {% else %}
+                <a class="nav-link" href="{% url 'profile' %}">Личный кабинет</a>
+                <a class="nav-link" href="{% url 'calendar' %}">Расписание</a>
+                <a class="nav-link" href="{% url 'lesson' %}">Урок</a>
+                <a class="nav-link" href="{% url 'finance' %}">Финансы</a>
             {% endif %}
         </div>
-
 
         {% if user.is_authenticated %}
             <div class="d-flex align-items-center flex-row">
                 <div class="nav-link">
-                    <h6>Вы вошли как <a href="{% url 'profile' %}"><strong> {{ user }}</strong></a></h6></div>
+                    <h6 style="margin-bottom: 0">Вы вошли как <a href="{% url 'profile' %}"><strong> {{ user }}</strong></a></h6></div>
                 <div class="nav-link"><a id="logout-btn" href="#" class="btn my-button">Выйти</a></div>
             </div>
         {% else %}
