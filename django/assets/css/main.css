@@ -1,0 +1,120 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Stratos LC Web', serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-link,.card-text {
+  font-weight: 500;
+}
+
+.navbar-toggler {
+  color: rgb(93,167,217)!important;
+}
+
+.whiteboard {
+  background-color: white;
+}
+
+.modal-content {
+  background-color: #675fff;
+  border: black;
+  font-weight: normal;
+}
+
+.img-logo {
+  height: 50px;
+}
+
+.nav-link {
+  color: #675fff;
+}
+
+#top_text {
+  font-size: 1.8rem;
+}
+
+#price {
+  color: #a37efe;
+}
+
+#phone_icon {
+  color: #a37ffe;
+}
+
+.my-button {
+  background: transparent;
+  color: rgb(93,167,217)!important;
+  border-color: #0ea0ff!important;
+}
+
+.my-button:hover {
+  background: darkslategray;
+}
+
+#login-btn {
+  color: white;
+  background-color: #474747;
+}
+
+a.lesson-btn{
+  background-color: #c8ecff;
+}
+
+#signup-btn.btn.to-form, .submit-btn, .sub {
+  color: black;
+  background-color: #ffd694;
+}
+
+.submit-btn .sub{
+  font-weight: 500;
+  min-width: 165px;
+}
+
+#message_container {
+
+}
+
+.modal-footer{
+justify-content: space-between;
+}
+
+.close, .close:hover{
+  color: white;
+}
+#message1{
+  background-color: #474747;
+}
+
+#message_container{
+  margin-left: 15px;
+}
+
+#teachers_block,.skills{
+  height: 100%;
+}
+
+#navbar{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#dialog_footer{
+
+}
+
+.delete-btn {
+  background-color: #ff6161;
+}
+
+
+.ui-widget-header {
+  background-color: #ce93d8;
+
+}

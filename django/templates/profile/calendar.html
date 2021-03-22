@@ -9,6 +9,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const calendarEl = document.getElementById('calendar');
             const calendar = new FullCalendar.Calendar(calendarEl, {
+                {#themeSystem: 'bootstrap',#}
                 initialView: 'timeGridWeek',
                 //headerToolbar: {
                 //    center: 'dayGridMonth,timeGridWeek,listWeek'
@@ -24,26 +25,47 @@
                     },
                     timeGridWeek: { // name of view
                         slotLabelFormat: {
-                            hour: 'numeric',  // or numeric
+                            hour: 'numeric',
                             minute: '2-digit',
                         },
                         slotMinTime: '08:00:00',
-                        slotMaxTime: '24:00:00',
+                        slotMaxTime: '25:00:00',
                         slotLabelInterval: '01:00',
                         scrollTime: '12:00',
                     },
                 },
+                expandRows: true,
+                nowIndicator: true,
                 dayMaxEvents: true,
                 selectable: true,
-                dateClick: function (info) {
-                    $("#dialog-add-lesson").dialog("open");
-                    $("#id_time_start").val(info.date.toLocaleString().replace(',', ''));
+                eventStartEditable: true,
+                eventOverlap: false,
+                dateClick: function (info) {  //создание нового урока
+                    $("#dialog-lesson").dialog("open");
+                    $("#id_time_start").val(info.dateStr).hide(); //для компьютера, нужно скрыть
+                    $("label[for=id_time_start]").hide(); //лэйбел (текст рядом)
+                    $("#id_time_start_prc").val(info.date.toLocaleString().replace(',', '')); // текст для людей todo удалить секунды
+                    $('#id_subject').trigger('focus');
+                    $('.delete-btn').hide();
                 },
-                eventClick: function (info) {
-                    $("#dialog-info-lesson").dialog("open");
-                    {#console.log(info.event.start.toLocaleString().replace(',', ''));#}
-                    $("#id_time_start").val(info.event.start.toLocaleString().replace(',', ''));
-                    $("#id_subject").val(info.event.subject);
+                eventClick: function (info) {   //редактирование урока
+                    $("#dialog-lesson").dialog("open");
+                    {#console.log(info);  //вывод в консоль#}
+                    $("#id_time_start").val(info.event.startStr).hide(); //для компьютера, нужно скрыть
+                    $("label[for=id_time_start]").hide(); //лэйбел (текст рядом)
+                    $("#id_time_start_prc").val(info.event.start.toLocaleString().replace(',', ''));  //todo удалить секунды
+                    $("#id_duration").val((info.event._instance.range.end - info.event._instance.range.start) / 60000);
+                    $("#id_subject").val(info.event.title).trigger('focus');
+                    $('.delete-btn').show();
+                },
+                eventDrop: function (info) {   //после отпускания урока (когда тащишь и бросаешь)
+                    $("#dialog-lesson").dialog("open");
+                    $("#id_time_start").val(info.event.startStr).hide(); //для компьютера, нужно скрыть
+                    $("label[for=id_time_start]").hide(); //лэйбел (текст рядом)
+                    $("#id_time_start_prc").val(info.event.start.toLocaleString().replace(',', ''));  //todo удалить секунды
+                    $("#id_duration").val((info.event._instance.range.end - info.event._instance.range.start) / 60000);
+                    $("#id_subject").val(info.event.title).trigger('focus');
+                    $('.delete-btn').show();
                 },
                 {#timeZone: 'local',#}
                 allDaySlot: false,
@@ -53,7 +75,7 @@
                             id: {{ lesson.id }},
                             title: '{{ lesson.subject }}',
                             start: '{{ lesson.time_start|date:"c" }}',
-                            end: '{{ lesson.get_end_time|date:"c" }}',
+                            end: '{{ lesson.time_end|date:"c" }}',
                             {% if lesson.duration == '60' %}
                                 backgroundColor: 'black',
                                 textColor: 'pink'
@@ -66,19 +88,18 @@
                 ]
             });
             calendar.setOption('locale', 'ru');
-
             calendar.render();
 
-            $("#dialog-add-lesson").dialog({
+            $("#dialog-lesson").dialog({
                 autoOpen: false,
-                height: 400,
+                height: 410,
                 width: 350,
                 resizable: false,
                 modal: true,
                 closeOnEscape: true,
                 open: function (event, ui) {
                     $('.ui-widget-overlay').bind('click', function () {
-                        $('#dialog-add-lesson').dialog('close');
+                        $('#dialog-lesson').dialog('close');
                     });
                 },
                 show: {
@@ -89,7 +110,10 @@
                     effect: 'fade',
                     duration: 200
                 },
-                title: 'Добавить урок',
+                close: function () {
+                    window.location.reload();
+                },
+                title: 'Урок',
                 closeText: "hide",
                 classes: {
                     "ui-dialog": "modal-content",
@@ -101,37 +125,6 @@
                 },
             });
 
-            $("#dialog-info-lesson").dialog({
-                autoOpen: false,
-                height: 400,
-                width: 350,
-                resizable: false,
-                modal: true,
-                closeOnEscape: true,
-                open: function (event, ui) {
-                    $('.ui-widget-overlay').bind('click', function () {
-                        $("#dialog-info-lesson").dialog('close');
-                    });
-                },
-                show: {
-                    effect: 'fade',
-                    duration: 200
-                },
-                hide: {
-                    effect: 'fade',
-                    duration: 200
-                },
-                title: 'Изменить урок',
-                closeText: "hide",
-                classes: {
-                    "ui-dialog": "modal-content",
-                    "ui-dialog-titlebar": "modal-header",
-                    "ui-dialog-title": "modal-title",
-                    "ui-dialog-titlebar-close": "close",
-                    "ui-dialog-content": "modal-body",
-                    "ui-dialog-buttonpane": "modal-footer"
-                },
-            });
         });
     </script>
 
@@ -139,13 +132,14 @@
         #calendar {
             background-color: #bdaeff;
             color: #000e;
+            padding: 5px;
         }
 
         .fc-event-main-frame {
             cursor: pointer;
         }
 
-        #dialog-add-lesson, #dialog-info-lesson {
+        #dialog-lesson {
             background-color: white;
         }
 
@@ -189,23 +183,22 @@
     </style>
 {% endblock extra_extra_head %}
 {% block right-content %}
-    <div id="dialog-add-lesson">
+    <div id="dialog-lesson" style="height: 100%">
         <div id="dialog-form">
-            <form method="post" action="{% url 'add_lesson' %}">
+            <form id="form" method="post" action="{% url 'crud_lesson' %}">
                 {% csrf_token %}
-                <div class="{% if form_add.non_field_errors %}invalid{% endif %} mb-2">
-                    {% for error in form_add.non_field_errors %}
+                <div class="to-lesson">
+                    <a href="{% url 'lesson' %}" class="lesson-btn btn btn-block">Перейти к уроку</a>
+                </div>
+                <div class="{% if form.non_field_errors %}invalid{% endif %} mb-2">
+                    {% for error in form.non_field_errors %}
                         {{ error }}
                     {% endfor %}
                 </div>
-                {% for field in form_add %}
+                {% for field in form %}
                     <div class="form-group">
                         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                        {% if field.label == "Время" %}
-                            {% render_field field class="form-control" placeholder=field.label readonly=readonly %}
-                        {% else %}
-                            {% render_field field class="form-control" placeholder=field.label %}
-                        {% endif %}
+                        {% render_field field class="form-control" placeholder=field.label %}
                         <div class="{% if field.errors %} invalid{% endif %}">
                             {% for error in field.errors %}
                                 <p class="help-block">{{ error }}</p>
@@ -213,39 +206,9 @@
                         </div>
                     </div>
                 {% endfor %}
-                <button type="submit" class="submit-btn btn" autofocus="autofocus">Добавить</button>
-
-            </form>
-        </div>
-    </div>
-
-    <div id="dialog-info-lesson">
-        <div id="dialog-form">
-            <form method="post" action="{% url 'add_lesson' %}">
-                {% csrf_token %}
-                <div class="{% if form_editnon_field_errors %}invalid{% endif %} mb-2">
-                    {% for error in form_editnon_field_errors %}
-                        {{ error }}
-                    {% endfor %}
-                </div>
-                {% for field in form_edit %}
-                    <div class="form-group">
-                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                        {% if field.label == "Время" %}
-                            {% render_field field class="form-control" placeholder=field.label readonly=readonly %}
-                        {% else %}
-                            {% render_field field class="form-control" placeholder=field.label %}
-                        {% endif %}
-                        <div class="{% if field.errors %} invalid{% endif %}">
-                            {% for error in field.errors %}
-                                <p class="help-block">{{ error }}</p>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
-                <div>
-                                        <button type="submit" class="submit-btn btn" autofocus="autofocus">Сохранить</button>
-                    {#                    <button type="button" class="submit-btn btn" autofocus="autofocus">Удалить</button>#}
+                <div id="dialog_footer" class="d-flex justify-content-between">
+                    <button type="submit" class="submit-btn btn" autofocus="autofocus">Сохранить</button>
+                    <button type="submit" name="delete" class="delete-btn btn">Удалить</button>
                 </div>
             </form>
         </div>

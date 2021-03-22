@@ -18,17 +18,13 @@ class SignupForm(forms.ModelForm):
         fields = ('first_name', 'phone', 'email')
 
 
-class AddLessonForm(BSModalModelForm):
+class LessonForm(BSModalModelForm):
     duration = forms.ChoiceField(choices=[(45, "45 минут"), (60, "60 минут")], label='Длительность')
+    time_start_prc = forms.DateTimeField(disabled=True, label='Начало занятия')
 
     class Meta:
         model = Lesson
-        fields = ('subject', 'time_start', 'duration')
-
-
-class EditLessonForm(BSModalModelForm):
-    duration = forms.ChoiceField(choices=[(45, "45 минут"), (60, "60 минут")], label='Длительность')
-
-    class Meta:
-        model = Lesson
-        fields = ('subject', 'time_start', 'duration')
+        fields = ('subject',
+                  'time_start',
+                  'time_start_prc',
+                  'duration')

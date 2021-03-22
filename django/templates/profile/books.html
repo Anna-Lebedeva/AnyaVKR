@@ -1,0 +1,27 @@
+{% extends 'profile/profile.html' %}
+{% load static %}
+
+{% block extra_extra_head %}
+    <script>
+
+    </script>
+
+    <style>
+
+    </style>
+{% endblock extra_extra_head %}
+
+{% block right-content %}
+
+    {% for book in books %}
+        <ul>
+            <li><a href="{% url 'lesson_book' book.id %}">{{ book.title }}</a></li>
+        </ul>
+    {% endfor %}
+
+{% endblock right-content %}
+{# https://foatk.ru/documents/book1.pdf #}
+
+{% block footer %}
+{% endblock footer %}
+

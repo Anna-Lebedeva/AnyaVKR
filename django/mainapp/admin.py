@@ -40,7 +40,7 @@ admin.site.register(models.PreStudent, PreStudentAdmin)
 
 
 class LessonAdmin(admin.ModelAdmin):
-    list_display = ('student', 'board', 'subject', 'time_start', 'duration', 'get_teacher')
+    list_display = ('student', 'board', 'subject', 'time_start', 'duration', 'teacher', 'board')
 
 
 admin.site.register(models.Lesson, LessonAdmin)
@@ -51,3 +51,12 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Course, CourseAdmin)
+
+
+class BookAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'grade', 'category')
+    search_fields = ('title', 'author')
+    list_filter = ('grade', 'category')
+
+
+admin.site.register(models.Book, BookAdmin)

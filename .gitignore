@@ -23,3 +23,5 @@ wbo-backup*
 
 # Nightwatch test results
 tests_output/
+/django/AnyaVKR/secrets/
+

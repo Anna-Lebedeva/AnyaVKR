@@ -3,6 +3,7 @@
 
 {% block extra_extra_head %}
     <script>
+        //слайдер
         window.onload = init;
 
         function init() {
@@ -31,6 +32,7 @@
         body {
             overflow: hidden;
         }
+
         #lesson-board {
             width: 100%;
             height: 100%;
@@ -184,20 +186,27 @@
 {% endblock extra_extra_head %}
 
 {% block right-content %}
-    <label for="customRange1" style="display: none"></label>
     <input type="range" class="form-range" id="customRange1" min="0" max="10000" value="7000">
     <div class="drag-container" id="drag-container">
         <div class="panel-one" id="drag-left">
             <iframe id="lesson-board"
-                    src="http://localhost:8080/boards/{{ lesson.board }}"></iframe>
+                    src="{{ BOARD_URL }}/boards/{{ lesson.board }}"></iframe>
         </div>
         <div class="dragbar" id="dragbar"></div>
         <div class="panel-two" id="drag-right">
-            <!--suppress DjangoUnresolvedStaticReferenceInspection -->
-            <embed id="lesson-book"
-                   src="{{ MEDIA_URL }}books/book1.pdf?#scrollbar=0&toolbar=1&navpanes=1&page=1&view=FitH"
-                   width="100%" height="100%"
-                   type="application/pdf">
+            {% if book_file %}
+                <iframe id="lesson-book"
+                        src="https://storage.cloud.google.com/{{ bucket_name }}/{{ book_file }}?#scrollbar=0&navpanes=1&page=1&view=FitH"
+                        width="100%" height="100%"
+                        type="application/pdf"></iframe>
+            {% else %}
+                {% if is_student %}
+                    <p>Ваш урок скоро начнется:)</p>
+                {% else %}
+                    <p>Не забудьте выбрать учебные материалы во вкладке <a href="{% url 'books' %}">Учебники</a></p>
+                {% endif %}
+                <p></p>
+            {% endif %}
         </div>
     </div>
 {% endblock right-content %}

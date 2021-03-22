@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Stratos LC Web';
+	src: url(../fonts/StratosLCWeb/StratosLCWeb-Light.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Light.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Light.woff2) format('woff2'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Light.woff) format('woff'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Light.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stratos LC Web';
+	src: url(../fonts/StratosLCWeb/StratosLCWeb-Bold.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Bold.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Bold.woff2) format('woff2'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Bold.woff) format('woff'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Bold.ttf) format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stratos LC Web';
+	src: url(../fonts/StratosLCWeb/StratosLCWeb-Medium.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Medium.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Medium.woff2) format('woff2'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Medium.woff) format('woff'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Medium.ttf) format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Stratos LC Web';
+	src: url(../fonts/StratosLCWeb/StratosLCWeb-Regular.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Regular.eot) format('embedded-opentype'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Regular.woff2) format('woff2'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Regular.woff) format('woff'),
+	url(../fonts/StratosLCWeb/StratosLCWeb-Regular.ttf) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

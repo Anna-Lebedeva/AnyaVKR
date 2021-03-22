@@ -30,17 +30,24 @@
                     {% block right-content %}
 
                         <div class="pl-4">
-                            <h5>Здравствуйте, {% if user.first_name %}{{ user.first_name }} {{ user.last_name }}
-                            {% else %}{{ user }}{% endif %}</h5>
-
-                            {% if not course %}
-                                <p>Вы не выбрали курс</p>
+                            {#                            <h5>Здравствуйте, {% if user.first_name %}{{ user.first_name }} {{ user.last_name }}#}
+                            {#                            {% else %}{{ user }}{% endif %}</h5>#}
+                            <h5>Здравствуйте, {{ user.get_full_name }}</h5>
+                            {% if is_student %}
+                                {% if not course %}
+                                    <p>Вы не выбрали курс</p>
+                                {% else %}
+                                    <p>Благодарим за выбор нашей школы! <br>
+                                        Вы выбрали курс на {{ course.course_length }} дней <br>
+                                        Для оплаты перейдите в <a href="{% url "finance" %}">финансы</a>
+                                    </p>
+                                {% endif %}
                             {% else %}
-                                {% for cours in course %}
-                                    <p>Благодарим за выбор нашей школы! <br> Вы выбрали курс
-                                        на {{ cours.course_length }} дней <br> Для оплаты перейдите
-                                        <a href="{% url "finance" %}">Финансы</a></p>
-                                {% endfor %}
+                                <p>
+                                Спасибо за работу! <br>
+                                Вы провели в этом месяце ?? уроков <br> {# fixme количество уроков #}
+                                Просмотреть Ваш доход вы можете в разделе <a href="{% url "finance" %}">Финансы</a>
+                                </p>
                             {% endif %}
                         </div>
                     {% endblock right-content %}

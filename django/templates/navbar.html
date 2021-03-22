@@ -31,13 +31,18 @@
                 <a class="nav-link" href="{% url 'calendar' %}">Расписание</a>
                 <a class="nav-link" href="{% url 'lesson' %}">Урок</a>
                 <a class="nav-link" href="{% url 'finance' %}">Финансы</a>
+{#                {% if lesson %}#}
+                    <a class="nav-link pl-3" href="{% url 'books' %}" style="color: #ff8282">Учебники</a>
+{#                {% endif %}#}
             {% endif %}
         </div>
 
         {% if user.is_authenticated %}
             <div class="d-flex align-items-center flex-row">
                 <div class="nav-link">
-                    <h6 style="margin-bottom: 0">Вы вошли как <a href="{% url 'profile' %}"><strong> {{ user }}</strong></a></h6></div>
+                    <h6 style="margin-bottom: 0">Вы вошли как <a
+                            href="{% url 'profile' %}"><strong> {{ user }}</strong></a>
+                    </h6></div>
                 <div class="nav-link"><a id="logout-btn" href="#" class="btn my-button">Выйти</a></div>
             </div>
         {% else %}

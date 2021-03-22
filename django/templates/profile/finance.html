@@ -5,5 +5,13 @@
 {% endblock extra_extra_head %}
 
 {% block right-content %}
-    <h1>ТУТ БУДУТ ДЕНЬГИ {{ user }}!!!!!</h1>
+    {% if is_student %}
+        <h1>СТУДЕНТ {{ user }}, ОПЛАТИ КУРС!!!!!</h1>
+    {% else %}
+        <h1>УЧИТЕЛЬ {{ user }}, ВАМ ЗАРПЛАТА НЕ ПОЛАГАЕТСЯ!!!!!</h1>
+    {% endif %}
+
+
+
+
 {% endblock right-content %}
