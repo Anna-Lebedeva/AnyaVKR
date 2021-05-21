@@ -18,7 +18,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/django/AnyaVKR/secrets" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (AnyaVKR)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (AnyaVKR)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />

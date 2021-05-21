@@ -91,10 +91,11 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'HOST': '127.0.0.1',
-            'PORT': '5678',
+            'PORT': '5432',
             'NAME': 'postgres',
             'USER': 'postgres',
-            'PASSWORD': DB_PASSWORD,
+            'PASSWORD': 'qwer',
+            # 'PASSWORD': DB_PASSWORD,
         }
     }
 # [END db_setup]
@@ -168,6 +169,6 @@ GS_CREDENTIALS = service_account.Credentials.from_service_account_file(
 )
 
 if DEBUG:
-    BOARD_URL = 'http://127.0.0.1:5001'
+    BOARD_URL = 'http://127.0.0.1:8080'
 else:
     BOARD_URL = 'http://35.184.187.225:5001'

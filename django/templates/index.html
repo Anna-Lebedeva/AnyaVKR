@@ -9,7 +9,7 @@
 
     <main class="page landing-page">
         <section class="portfolio-block block-intro">
-            <h3 style="color: #a37efe;">Mercury School - инновационная школа математики</h3>
+            <h3 style="color: #a37efe;">Добро пожаловать в онлайн-школу Mercury School</h3>
             <div class="container">
                 <div class="flex-row-reverse" id="top_text">
                     <p><strong>Уроки с преподавателем в онлайн-школе </strong>
@@ -25,7 +25,7 @@
                     <div class="col-lg-10 offset-lg-1">
                         <div style="position: center;overflow: hidden;padding-top: 56.25%;">
                             <iframe allowfullscreen=""
-                                    src="https://www.youtube-nocookie.com/embed/10SwsoYNkVc?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=10SwsoYNkVc&amp;controls=0"
+                                    src="https://www.youtube-nocookie.com/embed/9W25X7cqcGo?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=9W25X7cqcGo&amp;controls=0"
                                     style="width: 100%;height: 100%;position: absolute;top: 0;left: 0; border-style: none;"
                                     width="560" height="315"></iframe>
                         </div>
@@ -38,38 +38,38 @@
                 <div class="heading">
                     <h2>Сколько стоит?</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
+                <div class="row" >
+                    <div class="col-md-4" >
+                        <div class="card special-skill-item border-0" id="price">
                             <div class="card-header bg-transparent border-0"><i
                                     class="icon ion-android-favorite bg-secondary shadow"></i></div>
                             <div class="card-body">
                                 <h3 class="card-title" style="color: rgb(17,212,255);">4 урока</h3>
-                                <p class="card-text">Протестировать занятия на платформе PlanetBoard, понять насколько
+                                <p class="card-text" id="pretext">Протестировать занятия на платформе PlanetBoard, понять насколько
                                     подходит формат<br></p>
-                                <p class="card-text price">730 р. за урок<br><br></p>
+                                <p class="card-text price" id="stag">730 р. за урок<br><br></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
+                        <div class="card special-skill-item border-0" id="price">
                             <div class="card-header bg-transparent border-0"><i
                                     class="icon ion-android-bulb bg-success"></i></div>
                             <div class="card-body">
                                 <h3 class="card-title" style="color: rgb(64,0,248);">16 уроков</h3>
-                                <p class="card-text">Подтянуться по школьной программе<br></p>
-                                <p class="card-text price"><br><br>690 р. за урок<br><br></p>
+                                <p class="card-text" id="pretext">Подтянуться по школьной программе<br></p>
+                                <p class="card-text price" id="stag"><br><br>690 р. за урок<br><br></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card special-skill-item border-0">
+                        <div class="card special-skill-item border-0" id="price">
                             <div class="card-header bg-transparent border-0"><i
                                     class="icon ion-connection-bars bg-danger"></i></div>
                             <div class="card-body">
                                 <h3 class="card-title" style="color: rgb(255,37,155);">64 урока</h3>
-                                <p class="card-text">Стать гуру математики, удивить родителей и учителей<br></p>
-                                <p class="card-text price"><br>600 р. за урок<br><br></p>
+                                <p class="card-text" id="pretext">Стать гуру математики, удивить родителей и учителей<br></p>
+                                <p class="card-text price" id="stag"><br>600 р. за урок<br><br></p>
                             </div>
                         </div>
                     </div>
@@ -81,36 +81,25 @@
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">Наши преподаватели</h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh
-                    erat,
-                    pellentesque ut laoreet vitae. </p>
+                <p class="text-center" id="pretext">Постоянно проходят повышение квалификации! </p>
             </div>
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item"><img src="{% static 'img/avatars/Anya.png' %}" alt="Анна">
-                    <h3 class="name">Анна</h3>
-                    <p class="title">Работает репетитором 5 лет</p>
-                    <p class="description">Ровный репетитор. Каждый год сдает ЕГЭ по математике.&nbsp;</p>
-                    <div class="social">
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a></div>
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="{% static 'img/avatars/1.jpg' %}" alt="Владимир">
+                    <h3 class="name">Владимир</h3>
+                    <p class="title" id="stag">Работает репетитором 5 лет</p>
+                    <p class="description" id="pretext">Добрый репетитор. Каждый год сдает ЕГЭ по математике.&nbsp;</p>
+
                 </div>
-                <div class="col-md-6 col-lg-4 item"><img src="{% static 'img/avatars/Misha.png' %}" alt="Миша">
-                    <h3 class="name">Михаил</h3>
-                    <p class="title">Работает репетитором 0 лет</p>
-                    <p class="description">Строгий и требовательный репетитор.</p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
-                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="{% static 'img/avatars/2.jpg' %}" alt="Миша">
+                    <h3 class="name">Анна</h3>
+                    <p class="title" id="stag">Работает репетитором 3 года</p>
+                    <p class="description" id="pretext">Строгий и требовательный репетитор.</p>
                 </div>
                 <div class="col-md-6 col-lg-4 item"><img class="rounded-circle" src="{% static 'img/avatars/3.jpg' %}"
                                                          alt="">
-                    <h3 class="name">Carl Kent</h3>
-                    <p class="title">Stylist</p>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent
-                        aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam
-                        dictum feugiat tellus, a semper massa. </p>
-                    <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i
-                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    <h3 class="name">Егор</h3>
+                    <p class="title" id="stag">Работает репетитором 3 года</p>
+                    <p class="description" id="pretext">Очень чуткий и внимательный репетитор. </p>
                 </div>
             </div>
         </div>

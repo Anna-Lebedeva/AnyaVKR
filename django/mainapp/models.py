@@ -107,6 +107,7 @@ class Book(models.Model):
     file = models.FileField(upload_to='books', verbose_name='Файл')
     grade = models.CharField(max_length=50, verbose_name='Класс', choices=grades)
     category = models.CharField(max_length=50, verbose_name='Категория', choices=book_category)
+    picture = models.ImageField(verbose_name='Фото', blank=True)
 
     def __str__(self):
         return f'{self.grade} {self.author} {self.title}'

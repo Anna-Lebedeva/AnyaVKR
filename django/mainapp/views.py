@@ -12,17 +12,17 @@ from django.views import View, generic
 
 from .forms import CustomAuthenticationForm, SignupForm, LessonForm
 from .models import Course, Lesson, Student, Teacher, Book
-from ..AnyaVKR.settings import GS_BUCKET_NAME
+from AnyaVKR.settings import GS_BUCKET_NAME
 
 User = get_user_model()
 
 
 def define_user(u):
-    if u.__class__ is Student:
+    try:
         user = Student.objects.get(id=u.id)
         lessons = Lesson.objects.filter(student=user)
         is_student = True
-    else:
+    except Student.DoesNotExist:
         user = Teacher.objects.get(id=u.id)
         lessons = Lesson.objects.filter(student__student_teacher=user)
         is_student = False
@@ -93,7 +93,13 @@ class LessonView(View):
         user, lessons, is_student = define_user(user)
         # FIXME первый урок серьезно????
         lesson = lessons.first()
-        lesson.book_id = kwargs['book']
+        try:
+            lesson.book_id = kwargs['book']
+        except KeyError:
+            books = Book.objects.all()
+            return render(request, 'profile/books.html', context={'user': user,
+                                                                'is_student': is_student,
+                                                                'books': books})
         try:
             book_file = lesson.book.file
             print(book_file)
